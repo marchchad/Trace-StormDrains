@@ -81,7 +81,7 @@ def calcFlow(output,path):
 
 try:
     # Name of geometric network
-    sdnNet = workspace+'\\SDN\\'+'STORMDRAINNET_NET'
+    sdnNet = workspace+'\\SDN\\STORMDRAINNET_NET'
 
     # Feature class to be used as flags in tracing the geometric network
     flags = 'CatchBasin'
@@ -124,7 +124,7 @@ try:
 
             # Trace the network downstream
             arcpy.TraceGeometricNetwork_management(sdnNet,newNet,flag,"TRACE_DOWNSTREAM","#","#","#","#","#","NO_TRACE_ENDS","NO_TRACE_INDETERMINATE_FLOW","#","#","AS_IS","#","#","#","AS_IS")
-            print newNet
+            
             gMain = "GravityMain"
             latLine = "LateralLine"
             oChann = "OpenChannel"
