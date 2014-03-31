@@ -142,7 +142,7 @@ try:
         fields = [f.name for f in arcpy.ListFields(path)]
         for field in newFields:
             if field not in fields:
-                print 'adding {0} to {1}...'.format(field, path)
+                print 'adding '+field+' to '+path+'...'
                 arcpy.AddField_management(path,field,'FLOAT')
                 
     # Start an edit session. Must provide the worksapce.
